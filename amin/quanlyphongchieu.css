@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1120;
+  color: #e2e8f0;
+  padding: 28px;
+}
+
+.container {
+  max-width: 1250px;
+  /* margin: auto; */
+  margin-left: 230px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: white;
+}
+
+.sub {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 22px;
+}
+
+.card {
+  /* background: #151f33; */
+  background-color: rgba(18, 23, 41, 0.85);
+  border: 1px solid #263650;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.room-list {
+  display: grid;
+  gap: 12px;
+}
+
+.room {
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.room.active {
+  border-color: #38bdf8;
+  background: #172d45;
+}
+
+.room-info strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.room-info span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary {
+  background: #334155;
+  color: white;
+}
+
+.danger {
+  background: #991b1b;
+  color: white;
+}
+
+.success {
+  background: #047857;
+  color: white;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  background: #0b1120;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 7px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #38bdf8;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.row-item {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  padding: 14px;
+  background: #1e293b;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.row-item .form-group {
+  margin: 0;
+}
+
+.row-item button {
+  background: #991b1b;
+  color: white;
+  height: 40px;
+}
+
+.total {
+  background: #0b1120;
+  border-radius: 9px;
+  padding: 15px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total strong {
+  color: #38bdf8;
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.price-grid .form-group {
+  margin: 0;
+}
+
+.empty {
+  color: #94a3b8;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.hint {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    padding: 14px;
+  }
+
+  .row-item {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(8, 11, 20, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+
+  z-index: 100;
+}
+
+.logo {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+}
+
+.menu a {
+  display: block;
+  padding: 13px 17px;
+  margin-bottom: 6px;
+
+  color: #aeb8cc;
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  color: #fff;
+  background: rgba(63, 130, 255, 0.12);
+}
+
+.menu a.active {
+  color: #fff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  box-shadow: 0 8px 20px rgba(63, 130, 255, 0.18);
+}
+
+.logout {
+  margin-top: auto;
+  padding-bottom: 25px;
+}
+
+.logout a {
+  color: #ff8585;
+}
+
+.logout a:hover {
+  color: #fff;
+  background: rgba(220, 54, 54, 0.2);
+}

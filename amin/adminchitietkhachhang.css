@@ -1,0 +1,482 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(54, 100, 255, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(130, 60, 255, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container-box {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding: 35px 0 60px;
+}
+
+/* =========================
+   NÚT QUAY LẠI
+========================= */
+
+.back {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  padding: 8px 16px;
+
+  color: #cbd4e8;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back:hover {
+  color: #ffffff;
+
+  background: rgba(63, 130, 255, 0.15);
+
+  transform: translateX(-3px);
+}
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+.title {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   THÔNG TIN SUẤT CHIẾU
+========================= */
+
+#thongTinSuatChieu {
+  margin-bottom: 35px;
+
+  padding: 22px 25px;
+
+  background: rgba(18, 23, 41, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  color: #c8d0e2;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   CÁC THÔNG TIN BÊN TRONG
+========================= */
+
+#thongTinSuatChieu h4,
+#thongTinSuatChieu h5 {
+  margin-top: 0;
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+#thongTinSuatChieu p {
+  margin: 8px 0;
+
+  color: #aeb7cc;
+}
+
+#thongTinSuatChieu strong {
+  color: #ffffff;
+}
+
+/* =========================
+   TÊN PHIM
+========================= */
+
+#thongTinSuatChieu .ten-phim {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 7px 13px;
+
+  color: #8fb7ff;
+
+  background: rgba(63, 130, 255, 0.1);
+
+  border: 1px solid rgba(63, 130, 255, 0.2);
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   TIÊU ĐỀ DANH SÁCH
+========================= */
+
+.container-box > h3 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   DANH SÁCH KHÁCH HÀNG
+========================= */
+
+#danhSachKhachHang {
+  padding: 5px;
+
+  background: rgba(18, 23, 41, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  overflow-x: auto;
+}
+
+/* =========================
+   TABLE KHÁCH HÀNG
+========================= */
+
+#danhSachKhachHang table {
+  width: 100%;
+
+  min-width: 750px;
+
+  border-collapse: collapse;
+
+  color: #ffffff;
+}
+
+/* Header */
+
+#danhSachKhachHang thead {
+  background: rgba(63, 130, 255, 0.08);
+}
+
+#danhSachKhachHang th {
+  padding: 16px 14px;
+
+  color: #8fb7ff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Nội dung */
+
+#danhSachKhachHang td {
+  padding: 15px 14px;
+
+  color: #c8d0e2;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  vertical-align: middle;
+}
+
+/* Hover */
+
+#danhSachKhachHang tbody tr {
+  transition: background 0.2s ease;
+}
+
+#danhSachKhachHang tbody tr:hover {
+  background: rgba(63, 130, 255, 0.06);
+}
+
+#danhSachKhachHang tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   TÊN KHÁCH HÀNG
+========================= */
+
+#danhSachKhachHang .ten-khach {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+/* =========================
+   SỐ ĐIỆN THOẠI
+========================= */
+
+#danhSachKhachHang .so-dien-thoai {
+  color: #aeb7cc;
+}
+
+/* =========================
+   SỐ GHẾ
+========================= */
+
+#danhSachKhachHang .so-ghe {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  color: #bdaeff;
+
+  background: rgba(106, 92, 255, 0.12);
+
+  border: 1px solid rgba(106, 92, 255, 0.18);
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   GIỜ CHIẾU
+========================= */
+
+#danhSachKhachHang .gio-chieu {
+  color: #78aaff;
+
+  font-weight: 700;
+}
+
+/* =========================
+   NÚT XÓA VÉ
+========================= */
+
+#danhSachKhachHang .btn-xoa,
+#danhSachKhachHang .nut-xoa {
+  padding: 7px 12px;
+
+  color: #ff8585;
+
+  background: rgba(255, 70, 70, 0.08);
+
+  border: 1px solid rgba(255, 70, 70, 0.2);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#danhSachKhachHang .btn-xoa:hover,
+#danhSachKhachHang .nut-xoa:hover {
+  color: #ffffff;
+
+  background: rgba(255, 70, 70, 0.25);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   2 NÚT BUTTON NẾU JS DÙNG .nut
+========================= */
+
+.nut {
+  padding: 8px 14px;
+
+  margin-right: 7px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nut:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+}
+
+/* =========================
+   THÔNG BÁO KHÔNG CÓ KHÁCH
+========================= */
+
+#danhSachKhachHang .khong-co-khach,
+#danhSachKhachHang .empty {
+  padding: 40px 20px;
+
+  text-align: center;
+
+  color: #7f89a3;
+
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .container-box {
+    width: 92%;
+
+    padding-top: 25px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  #thongTinSuatChieu {
+    padding: 20px;
+  }
+
+  #danhSachKhachHang {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-box {
+    width: calc(100% - 25px);
+
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 23px;
+  }
+
+  #thongTinSuatChieu {
+    padding: 16px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+  }
+
+  .container-box > h3 {
+    font-size: 18px;
+  }
+
+  #danhSachKhachHang {
+    border-radius: 12px;
+  }
+}
+.nut {
+  padding: 8px 14px;
+  margin-right: 7px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nut:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+  box-shadow: 0 8px 18px rgba(63, 130, 255, 0.25);
+}
+
+.nut:active {
+  transform: translateY(0);
+}

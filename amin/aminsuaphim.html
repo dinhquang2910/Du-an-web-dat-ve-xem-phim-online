@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sửa phim</title>
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../photo/avatar.jpg" />
+    <link rel="stylesheet" href="aminsuaphim.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2 class="mb-4">SỬA PHIM</h2>
+
+        <!-- TÊN PHIM -->
+        <label for="tenPhim"> Tên phim </label>
+
+        <input type="text" id="tenPhim" class="form-control" />
+
+        <!-- ẢNH -->
+        <label for="anhPhim"> Ảnh phim </label>
+
+        <input
+          type="text"
+          id="anhPhim"
+          class="form-control"
+          placeholder="URL ảnh phim"
+        />
+
+        <img id="anhPreview" class="anh-preview" style="display: none" />
+
+        <!-- ĐẠO DIỄN -->
+        <label for="daoDien"> Đạo diễn </label>
+
+        <input type="text" id="daoDien" class="form-control" />
+
+        <!-- DIỄN VIÊN -->
+        <label for="dienVien"> Diễn viên </label>
+
+        <input type="text" id="dienVien" class="form-control" />
+
+        <!-- THỂ LOẠI -->
+        <label> Thể loại </label>
+
+        <div id="danhSachTheLoai" class="theLoaiBox">Đang tải thể loại...</div>
+
+        <!-- KHỞI CHIẾU -->
+        <label for="khoiChieu"> Khởi chiếu </label>
+
+        <input type="date" id="khoiChieu" class="form-control" />
+
+        <!-- THỜI LƯỢNG -->
+        <label for="thoiLuong"> Thời lượng (phút) </label>
+
+        <input type="number" id="thoiLuong" class="form-control" />
+
+        <!-- NGÔN NGỮ -->
+        <label for="ngonNgu"> Ngôn ngữ </label>
+
+        <input type="text" id="ngonNgu" class="form-control" />
+
+        <!-- RATED -->
+        <label for="rated"> Rated </label>
+
+        <input type="text" id="rated" class="form-control" />
+
+        <!-- NỘI DUNG -->
+        <label for="noiDung"> Nội dung </label>
+
+        <textarea id="noiDung" class="form-control" rows="6"></textarea>
+
+        <br />
+
+        <!-- NÚT -->
+        <button type="button" class="btn btn-primary" onclick="suaPhim()">
+          LƯU THAY ĐỔI
+        </button>
+
+        <button type="button" class="btn btn-secondary" onclick="quayLai()">
+          QUAY LẠI
+        </button>
+      </div>
+    </div>
+
+    <script src="./aminsuaphim.js"></script>
+  </body>
+</html>

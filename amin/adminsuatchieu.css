@@ -1,0 +1,565 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(54, 100, 255, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(130, 60, 255, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container-box {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding: 35px 0 60px;
+}
+
+/* =========================
+   QUAY LẠI
+========================= */
+
+.back {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  padding: 8px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 9px;
+
+  color: #cbd4e8;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back:hover {
+  color: #ffffff;
+
+  background: rgba(63, 130, 255, 0.15);
+
+  transform: translateX(-3px);
+}
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+.title {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   TÊN PHIM
+========================= */
+
+.ten-phim {
+  display: inline-block;
+
+  margin-bottom: 28px;
+
+  padding: 9px 15px;
+
+  color: #8fb7ff;
+
+  background: rgba(63, 130, 255, 0.1);
+
+  border: 1px solid rgba(63, 130, 255, 0.2);
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   FORM THÊM SUẤT CHIẾU
+========================= */
+
+.form-box {
+  margin-bottom: 35px;
+
+  padding: 25px;
+
+  background: rgba(18, 23, 41, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+.form-box h4 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.form-label {
+  margin-bottom: 8px;
+
+  color: #aeb7cc;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.form-control,
+.form-select {
+  min-height: 44px;
+
+  color: #ffffff !important;
+
+  background-color: rgba(255, 255, 255, 0.05) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+  border-radius: 9px !important;
+
+  font-size: 14px;
+
+  outline: none;
+
+  box-shadow: none !important;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: #737e97;
+}
+
+/* Khi click input */
+
+.form-control:focus,
+.form-select:focus {
+  color: #ffffff !important;
+
+  background-color: rgba(255, 255, 255, 0.07) !important;
+
+  border-color: #4d8dff !important;
+
+  box-shadow: 0 0 0 3px rgba(63, 130, 255, 0.1) !important;
+}
+
+/* Select option */
+
+.form-select option {
+  color: #ffffff;
+
+  background: #121729;
+}
+
+/* Icon lịch / giờ */
+
+.form-control::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+
+  opacity: 0.7;
+
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTON THÊM
+========================= */
+
+#btnThem {
+  margin-top: 5px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow: 0 8px 20px rgba(63, 130, 255, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#btnThem:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+  box-shadow: 0 12px 25px rgba(63, 130, 255, 0.25);
+}
+
+#btnThem:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   DANH SÁCH SUẤT
+========================= */
+
+.container-box > h4 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   DANH SÁCH SUẤT
+========================= */
+
+#danhSachSuat {
+  padding: 5px;
+
+  background: rgba(18, 23, 41, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  overflow-x: auto;
+}
+
+/* =========================
+   NẾU JS TẠO TABLE
+========================= */
+
+#danhSachSuat table {
+  width: 100%;
+
+  min-width: 750px;
+
+  border-collapse: collapse;
+
+  color: #ffffff;
+}
+
+#danhSachSuat thead {
+  background: rgba(63, 130, 255, 0.08);
+}
+
+#danhSachSuat th {
+  padding: 15px;
+
+  color: #8fb7ff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#danhSachSuat td {
+  padding: 14px 15px;
+
+  color: #c8d0e2;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#danhSachSuat tbody tr {
+  transition: background 0.2s ease;
+}
+
+#danhSachSuat tbody tr:hover {
+  background: rgba(63, 130, 255, 0.06);
+}
+
+#danhSachSuat tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   NÚT CHI TIẾT
+========================= */
+
+#danhSachSuat .btn-detail {
+  padding: 7px 12px;
+
+  color: #78aaff;
+
+  background: rgba(63, 130, 255, 0.1);
+
+  border: 1px solid rgba(63, 130, 255, 0.3);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#danhSachSuat .btn-detail:hover {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  border-color: transparent;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   NÚT XÓA
+========================= */
+
+#danhSachSuat .btn-delete {
+  padding: 7px 12px;
+
+  color: #ff8585;
+
+  background: rgba(255, 70, 70, 0.08);
+
+  border: 1px solid rgba(255, 70, 70, 0.2);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#danhSachSuat .btn-delete:hover {
+  color: #ffffff;
+
+  background: rgba(255, 70, 70, 0.25);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   NÚT SỬA
+========================= */
+
+#danhSachSuat .btn-edit {
+  padding: 7px 12px;
+
+  color: #c4a5ff;
+
+  background: rgba(130, 60, 255, 0.08);
+
+  border: 1px solid rgba(130, 60, 255, 0.2);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#danhSachSuat .btn-edit:hover {
+  color: #ffffff;
+
+  background: rgba(130, 60, 255, 0.3);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   THÔNG BÁO TRỐNG
+========================= */
+
+#danhSachSuat:empty {
+  min-height: 100px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .container-box {
+    width: 92%;
+
+    padding-top: 25px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+
+  #btnThem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-box {
+    width: calc(100% - 25px);
+
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 23px;
+  }
+
+  .ten-phim {
+    max-width: 100%;
+
+    font-size: 13px;
+  }
+
+  .form-box {
+    padding: 16px;
+
+    border-radius: 14px;
+  }
+
+  #danhSachSuat {
+    border-radius: 14px;
+  }
+}
+/* =========================
+   2 NÚT BUTTON TRONG JS
+========================= */
+
+.nut {
+  padding: 8px 14px;
+  margin-right: 7px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nut:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+  box-shadow: 0 8px 18px rgba(63, 130, 255, 0.25);
+}
+
+.nut:active {
+  transform: translateY(0);
+}

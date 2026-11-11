@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(54, 100, 255, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(130, 60, 255, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+}
+
+/* =========================
+   KHUNG CHÍNH
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 45px 20px 70px;
+}
+
+/* =========================
+   HỘP SỬA PHIM
+========================= */
+
+.box {
+  width: 100%;
+
+  padding: 35px 40px;
+
+  border-radius: 20px;
+
+  background: rgba(18, 23, 41, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(63, 130, 255, 0.05);
+}
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+.box h2 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.box label {
+  display: block;
+
+  margin-top: 18px;
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   INPUT + TEXTAREA
+========================= */
+
+.box .form-control {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  color: #ffffff;
+
+  background: rgba(8, 11, 20, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Placeholder */
+
+.box .form-control::placeholder {
+  color: #68738d;
+}
+
+/* Khi focus */
+
+.box .form-control:focus {
+  color: #ffffff;
+
+  background: rgba(8, 11, 20, 0.95);
+
+  border-color: #4d8dff;
+
+  box-shadow: 0 0 0 3px rgba(63, 130, 255, 0.12);
+
+  outline: none;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.box input[type="date"] {
+  color-scheme: dark;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.box input[type="number"] {
+  color-scheme: dark;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.box textarea.form-control {
+  min-height: 150px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   THỂ LOẠI
+========================= */
+
+.theLoaiBox {
+  width: 100%;
+
+  min-height: 55px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  color: #ffffff;
+
+  background: rgba(8, 11, 20, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+/* Checkbox thể loại */
+
+.theLoaiBox label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0;
+
+  padding: 7px 10px;
+
+  color: #c7d0e5;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theLoaiBox label:hover {
+  color: #ffffff;
+
+  background: rgba(63, 130, 255, 0.12);
+
+  border-color: rgba(63, 130, 255, 0.4);
+}
+
+/* Checkbox */
+
+.theLoaiBox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #4d8dff;
+
+  cursor: pointer;
+}
+
+/* =========================
+   ẢNH PREVIEW
+========================= */
+
+.anh-preview {
+  display: block;
+
+  width: 180px;
+  max-height: 250px;
+
+  object-fit: cover;
+
+  margin-top: 15px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   NHÓM NÚT
+========================= */
+
+/*
+   HTML hiện tại chưa có .button-group
+   nên dùng khoảng cách giữa 2 button
+*/
+
+.box button {
+  min-width: 180px;
+
+  padding: 11px 18px;
+
+  margin-top: 10px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* =========================
+   NÚT LƯU
+========================= */
+
+.box .btn-primary {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  border: none;
+
+  box-shadow: 0 8px 20px rgba(63, 130, 255, 0.15);
+}
+
+.box .btn-primary:hover {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #4b8bff, #7568ff);
+
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+  box-shadow: 0 12px 25px rgba(63, 130, 255, 0.25);
+}
+
+/* =========================
+   NÚT QUAY LẠI
+========================= */
+
+.box .btn-secondary {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  margin-left: 8px;
+}
+
+.box .btn-secondary:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 120, 170, 0.4);
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 130, 220, 0.6);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+  .container {
+    padding: 25px 15px 50px;
+  }
+
+  .box {
+    padding: 25px 20px;
+
+    border-radius: 16px;
+  }
+
+  .box h2 {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+  }
+
+  .box button {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-left: 0;
+  }
+
+  .box .btn-secondary {
+    margin-left: 0;
+  }
+
+  .anh-preview {
+    width: 150px;
+  }
+
+  .theLoaiBox {
+    gap: 7px;
+  }
+}

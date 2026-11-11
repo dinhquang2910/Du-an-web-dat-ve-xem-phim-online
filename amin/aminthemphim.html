@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./aminthemphim.css" />
+    <link rel="icon" href="../photo/avatar.jpg">
+
+    <title>Thêm phim</title>
+  </head>
+
+  <body>
+    <!-- hoho -->
+    <aside class="sidebar">
+      <div class="logo">ADMIN QUẢN LÝ</div>
+
+      <nav class="menu">
+        <a href="./amintrangchu.html" class="active"> Quản lý phim</a>
+
+        <a href="./amintheloai.html"> Quản lý thể loại </a>
+        <a href="./quanlyphongchieu.html"> Quản lý phòng chiếu </a>
+
+        <a href="./aminuser.html" > Quản lý tài khoản </a>
+<a href="./amindichvu.html"> Quản lý dịch vụ </a>
+        <a href="./amindoanhthu.html" > Quản lý doanh thu </a>
+      </nav>
+
+      <div class="menu logout">
+        <a href="../index.html"> Đăng xuất </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- HEADER -->
+
+      <div class="page-header">
+        <h1 class="page-title">Thêm phim</h1>
+
+        <div class="admin-info">
+          👤
+          <strong> Quản trị viên </strong>
+        </div>
+      </div> 
+    <!-- hoho -->
+    <div class="add-movie-container">
+      <div class="add-movie-box">
+        <h2>THÊM PHIM</h2>
+
+        <p class="subtitle">Nhập thông tin phim mới vào hệ thống</p>
+
+        <form id="addMovieForm">
+          <!-- Tên phim -->
+          <div class="form-group">
+            <label for="movieName">Tên phim</label>
+
+            <input
+              type="text"
+              id="movieName"
+              class="form-control"
+              placeholder="Nhập tên phim"
+              required
+            />
+          </div>
+
+          <!-- Đạo diễn -->
+          <div class="form-group">
+            <label for="movieDirector">Đạo diễn</label>
+
+            <input
+              type="text"
+              id="movieDirector"
+              class="form-control"
+              placeholder="Nhập tên đạo diễn"
+              required
+            />
+          </div>
+
+          <!-- Diễn viên -->
+          <div class="form-group">
+            <label for="movieActors">Diễn viên</label>
+
+            <input
+              type="text"
+              id="movieActors"
+              class="form-control"
+              placeholder="Ví dụ: Tom Holland, Zendaya..."
+              required
+            />
+          </div>
+
+
+<div class="form-group">
+  <label class="mb-2">Thể loại phim</label>
+
+  <div id="movieGenreList" class="genre-list">
+    <p class="text-muted">Đang tải thể loại...</p>
+  </div>
+
+  <small class="text-muted">
+    Tích chọn một hoặc nhiều thể loại phù hợp với phim.
+  </small>
+</div>
+
+          <div class="form-group">
+            <label for="releaseDate">Ngày khởi chiếu</label>
+
+            <input type="date" id="releaseDate" class="form-control" required />
+          </div>
+
+          <!-- Thời lượng -->
+          <div class="form-group">
+            <label for="movieDuration"> Thời lượng (phút) </label>
+
+            <input
+              type="number"
+              id="movieDuration"
+              class="form-control"
+              placeholder="Ví dụ: 120"
+              min="1"
+              required
+            />
+          </div>
+
+          <!-- Ngôn ngữ -->
+          <div class="form-group">
+            <label for="movieLanguage">Ngôn ngữ</label>
+
+            <input
+              type="text"
+              id="movieLanguage"
+              class="form-control"
+              placeholder="Ví dụ: Tiếng Anh"
+              required
+            />
+          </div>
+
+          <!-- Rated -->
+          <div class="form-group">
+            <label for="movieRated">Rated</label>
+
+            <select id="movieRated" class="form-control" required>
+              <option value="">-- Chọn độ tuổi --</option>
+              <option value="P">P - Mọi lứa tuổi</option>
+              <option value="K">K - Trẻ em</option>
+              <option value="T13">T13 - Từ 13 tuổi</option>
+              <option value="T16">T16 - Từ 16 tuổi</option>
+              <option value="T18">T18 - Từ 18 tuổi</option>
+            </select>
+          </div>
+
+          <!-- Nội dung -->
+          <div class="form-group">
+            <label for="movieContent">Nội dung phim</label>
+
+            <textarea
+              id="movieContent"
+              class="form-control"
+              rows="6"
+              placeholder="Nhập nội dung / mô tả phim..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- Ảnh phim -->
+          <div class="form-group">
+            <label for="movieImage">Đường dẫn ảnh phim</label>
+
+            <input
+              type="text"
+              id="movieImage"
+              class="form-control"
+              placeholder="Ví dụ: ../images/phim1.jpg"
+              required
+            />
+          </div>
+          <!-- Trailer -->
+<div class="form-group">
+  <label for="movieTrailer">Link Trailer YouTube</label>
+
+  <input
+    type="text"
+    id="movieTrailer"
+    class="form-control"
+    placeholder="Ví dụ: https://www.youtube.com/watch?v=8LJm14u1o-E"
+    required
+  />
+</div>
+
+          <!-- Thông báo -->
+          <p id="addMovieMessage"></p>
+
+          <!-- Nút -->
+          <div class="button-group">
+            <button type="submit" class="btn-add">THÊM PHIM</button>
+
+            <a href="./amintrangchu.html" class="btn-back"> QUAY LẠI </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./aminthemphim.js"></script>
+  </body>
+</html>

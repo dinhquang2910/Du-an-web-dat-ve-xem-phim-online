@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../photo/avatar.jpg" />
+    <link rel="stylesheet" href="./amintheloai.css" />
+
+    <title>Quản lý thể loại</title>
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo">ADMIN QUẢN LÝ</div>
+
+      <nav class="menu">
+        <a href="./nvtrangchu.html"> Quản lý Phim </a>
+
+        <a href="./nvtheloai.html" class="active"> Quản lý thể loại </a>
+      </nav>
+
+      <div class="menu logout">
+        <a href="../index.html"> Đăng xuất </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Quản lý thể loại</h1>
+
+        <div class="admin-info">
+          👤
+          <strong>Quản trị viên</strong>
+        </div>
+      </div>
+
+      <!-- KHU VỰC THÊM -->
+      <div class="theloai-container">
+        <div class="box-them">
+          <h3>Thêm thể loại</h3>
+
+          <div class="form-them">
+            <input
+              type="text"
+              id="tenTheLoai"
+              placeholder="Nhập tên thể loại..."
+            />
+
+            <button class="nut" onclick="themTheLoai()">+ Thêm thể loại</button>
+          </div>
+        </div>
+
+        <div class="box-danh-sach">
+          <div class="danh-sach-header">
+            <h3>Danh sách thể loại</h3>
+
+            <span id="soLuongTheLoai"> 0 thể loại </span>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+
+                <th>Tên thể loại</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+
+            <tbody id="danhSachTheLoai"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script src="./amintheloai.js"></script>
+  </body>
+</html>

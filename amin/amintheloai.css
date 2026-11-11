@@ -1,0 +1,481 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(54, 100, 255, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(130, 60, 255, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 240px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(8, 11, 20, 0.95);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+
+  z-index: 100;
+}
+
+/* LOGO */
+
+.logo {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 12px;
+}
+
+.menu a {
+  display: block;
+
+  padding: 13px 17px;
+
+  margin-bottom: 6px;
+
+  color: #aeb8cc;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  color: #ffffff;
+
+  background: rgba(63, 130, 255, 0.12);
+}
+
+/* MENU ĐANG CHỌN */
+
+.menu a.active {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  box-shadow: 0 8px 20px rgba(63, 130, 255, 0.18);
+}
+
+/* ĐĂNG XUẤT */
+
+.logout {
+  margin-top: auto;
+
+  padding-bottom: 25px;
+}
+
+.logout a {
+  color: #ff8585;
+}
+
+.logout a:hover {
+  color: #ffffff;
+
+  background: rgba(220, 54, 54, 0.2);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  margin-left: 240px;
+
+  min-height: 100vh;
+
+  padding: 30px 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.admin-info {
+  color: #cbd4e8;
+
+  font-size: 14px;
+}
+
+.admin-info strong {
+  color: #ffffff;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.theloai-container {
+  width: 100%;
+}
+
+/* =========================
+   FORM / BOX
+========================= */
+
+.box-them,
+.box-danh-sach {
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  background: rgba(18, 23, 41, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.box-them h3,
+.box-danh-sach h3 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =========================
+   FORM THÊM
+========================= */
+
+.form-them {
+  display: flex;
+
+  gap: 12px;
+}
+
+.form-them input {
+  flex: 1;
+
+  height: 45px;
+
+  padding: 0 15px;
+
+  color: #ffffff;
+
+  background: #080b14;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.form-them input::placeholder {
+  color: #6f7a91;
+}
+
+.form-them input:focus {
+  border-color: #4d8dff;
+
+  box-shadow: 0 0 0 3px rgba(63, 130, 255, 0.1);
+}
+
+/* =========================
+   NÚT THÊM
+========================= */
+
+.nut {
+  height: 45px;
+
+  padding: 0 20px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.nut:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(63, 130, 255, 0.2);
+}
+
+/* =========================
+   HEADER DANH SÁCH
+========================= */
+
+.danh-sach-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.danh-sach-header h3 {
+  margin: 0;
+}
+
+#soLuongTheLoai {
+  color: #8f9ab3;
+
+  font-size: 13px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(8, 11, 20, 0.75);
+}
+
+th {
+  padding: 14px;
+
+  color: #9da7bf;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+td {
+  padding: 14px;
+
+  color: #e5e9f2;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+tbody tr {
+  transition: 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* =========================
+   NÚT SỬA
+========================= */
+
+.btn-sua {
+  padding: 7px 13px;
+
+  color: #78aaff;
+
+  background: transparent;
+
+  border: 1px solid #4d8dff;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-sua:hover {
+  color: #ffffff;
+
+  background: #3f82ff;
+}
+
+/* =========================
+   NÚT XÓA
+========================= */
+
+.btn-xoa {
+  padding: 7px 13px;
+
+  margin-left: 7px;
+
+  color: #ff8585;
+
+  background: transparent;
+
+  border: 1px solid #ff5f5f;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-xoa:hover {
+  color: #ffffff;
+
+  background: #d93636;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+
+    padding: 25px;
+  }
+
+  .form-them {
+    flex-direction: column;
+  }
+
+  .page-header {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+
+    padding: 20px;
+  }
+
+  .menu {
+    padding: 10px;
+  }
+
+  .logout {
+    margin-top: 0;
+  }
+
+  .page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .box-danh-sach {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}

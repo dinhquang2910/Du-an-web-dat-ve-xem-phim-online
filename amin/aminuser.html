@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quản lý tài khoản</title>
+
+    <link
+      rel="stylesheet"
+      href="../bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="aminuser.css" />
+    <link rel="icon" href="../photo/avatar.jpg" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo">ADMIN QUẢN LÝ</div>
+
+      <nav class="menu">
+        <a href="./amintrangchu.html"> Quản lý phim </a>
+
+        <a href="./amintheloai.html"> Quản lý thể loại </a>
+        <a href="./quanlyphongchieu.html"> Quản lý phòng chiếu </a>
+
+        <a href="./aminuser.html" class="active"> Quản lý tài khoản </a>
+        <a href="./amindichvu.html"> Quản lý dịch vụ </a>
+        <a href="./amindoanhthu.html"> Quản lý doanh thu </a>
+      </nav>
+
+      <div class="menu logout">
+        <a href="../index.html"> Đăng xuất </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Quản lý tài khoản</h1>
+
+        <div class="admin-info">
+          👤
+          <strong> Quản trị viên </strong>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <div class="search-title">Tìm kiếm tài khoản</div>
+
+        <div class="search-row">
+          <input
+            type="text"
+            id="searchAccount"
+            class="form-control"
+            placeholder="Nhập họ tên hoặc số điện thoại..."
+          />
+
+          <button type="button" id="searchButton" class="btn btn-primary">
+            🔍 TÌM KIẾM
+          </button>
+          <button
+            type="button"
+            onclick="themTaiKhoan()"
+            class="btn btn-primary"
+          >
+            Thêm tài khoản
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="table table-bordered account-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+
+              <th>Họ tên</th>
+
+              <th>Số điện thoại</th>
+
+              <th>Vai trò</th>
+
+              <th>Ngày tạo</th>
+
+              <th>Trạng thái</th>
+
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+
+          <tbody id="accountList"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="../bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./aminuser.js"></script>
+  </body>
+</html>

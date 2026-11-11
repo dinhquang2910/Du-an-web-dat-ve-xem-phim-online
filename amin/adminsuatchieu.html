@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quản lý suất chiếu</title>
+    <link rel="icon" href="../photo/avatar.jpg" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./adminsuatchieu.css" />
+  </head>
+
+  <body>
+    <div class="container-box">
+      <a href="javascript:history.back()" class="btn btn-secondary back">
+        ← Quay lại
+      </a>
+
+      <h2 class="title">Quản lý suất chiếu</h2>
+
+      <div class="ten-phim" id="tenPhim">Đang tải...</div>
+
+      <div class="form-box">
+        <h4>Thêm suất chiếu</h4>
+
+        <div class="row mt-3">
+          <div class="col-md-4 mb-3">
+            <label class="form-label"> Ngày chiếu </label>
+
+            <input type="date" id="ngayChieu" class="form-control" />
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label class="form-label"> Giờ chiếu </label>
+
+            <input type="time" id="gioChieu" class="form-control" />
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label class="form-label"> Phòng chiếu </label>
+
+            <select id="maPhong" class="form-select">
+              <option value="">-- Chọn phòng --</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btnThem">+ Thêm suất chiếu</button>
+      </div>
+
+      <h4>Danh sách suất chiếu</h4>
+
+      <div id="danhSachSuat">Đang tải...</div>
+    </div>
+
+    <script src="./adminsuatchieu.js"></script>
+  </body>
+</html>

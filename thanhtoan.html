@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Thanh toán</title>
+    <link rel="icon" href="./photo/avatar.jpg" />
+    <link rel="stylesheet" href="thanhtoan.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">CINEMA</div>
+
+      <nav>
+        <a href="./dangnhapxong.html"> Trang chủ </a>
+
+        <a href="./vcuatoi.html"> Vé của tôi </a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>THANH TOÁN</h1>
+
+      <div class="thongtin">
+        <h2>Thông tin đặt vé</h2>
+
+        <p>
+          Phim:
+          <strong id="phim"></strong>
+        </p>
+
+        <p>
+          Phòng:
+          <strong id="phong"></strong>
+        </p>
+
+        <p>
+          Ngày:
+          <strong id="ngay"></strong>
+        </p>
+
+        <p>
+          Giờ:
+          <strong id="gio"></strong>
+        </p>
+
+        <p>
+          Ghế:
+          <strong id="ghe"></strong>
+        </p>
+
+        <p>
+          Dịch vụ:
+          <strong id="dichvu"></strong>
+        </p>
+
+        <p>
+          Số lượng combo:
+          <strong id="soLuongDichVu"></strong>
+        </p>
+      </div>
+
+      <div class="tong">
+        Tổng tiền:
+
+        <strong id="tongTien"> 0đ </strong>
+      </div>
+
+      <div class="phuong-thuc">
+        <h2>Phương thức thanh toán</h2>
+
+        <label class="payment">
+          <input type="radio" name="payment" value="Thanh toán tại quầy" />
+
+          <div>
+            <strong> Thanh toán tại quầy </strong>
+
+            <p>Thanh toán khi đến rạp</p>
+          </div>
+        </label>
+
+        <label class="payment">
+          <input type="radio" name="payment" value="Thanh toán ngân hàng" />
+
+          <div>
+            <strong> Thanh toán bằng tài khoản ngân hàng </strong>
+
+            <p>Chuyển khoản / quét QR</p>
+          </div>
+        </label>
+      </div>
+
+      <div id="bankBox" class="bank-box" style="display: none">
+        <h3>Thông tin chuyển khoản</h3>
+
+        <p>Ngân hàng: MB Bank</p>
+
+        <p>Số tài khoản: 0367265164</p>
+
+        <p>Chủ tài khoản: ĐINH HỒNG QUANG</p>
+
+        <p>
+          Nội dung:
+          <strong id="noiDungCK"> </strong>
+        </p>
+
+        <div class="qr"><img src="./qr.jpg" alt="qr" /></div>
+
+        <p>Sau khi chuyển khoản, hãy bấm xác nhận.</p>
+      </div>
+
+      <button id="btnThanhToan" class="btn">XÁC NHẬN ĐẶT VÉ</button>
+    </main>
+
+    <script src="thanhtoan.js"></script>
+  </body>
+</html>

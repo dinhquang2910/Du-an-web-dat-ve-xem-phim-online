@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Đặt vé</title>
+    <link rel="icon" href="./photo/avatar.jpg" />
+    <link rel="stylesheet" href="datve.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">CINEMA</div>
+
+      <nav>
+        <a href="./dangnhapxong.html">Trang chủ</a>
+        <a href="./vcuatoi.html">Vé của tôi</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>ĐẶT VÉ</h1>
+
+      <!-- THÔNG TIN PHIM -->
+
+      <section class="movie-info">
+        <h2 id="tenPhim">Đang tải phim...</h2>
+      </section>
+
+      <!-- NGÀY -->
+
+      <section class="box">
+        <h3>1. Chọn ngày chiếu</h3>
+
+        <div id="ngayContainer" class="option-container"></div>
+      </section>
+
+      <!-- PHÒNG -->
+
+      <section class="box">
+        <h3>2. Chọn phòng</h3>
+
+        <div id="phongContainer" class="option-container"></div>
+      </section>
+
+      <!-- GIỜ -->
+
+      <section class="box">
+        <h3>3. Chọn suất chiếu</h3>
+
+        <div id="gioContainer" class="option-container"></div>
+      </section>
+
+      <!-- GHẾ -->
+
+      <section class="box">
+        <h3>4. Chọn ghế</h3>
+
+        <div class="man-hinh">MÀN HÌNH</div>
+
+        <div id="gheContainer" class="ghe-container"></div>
+
+        <div class="chu-thich">
+          <span>
+            <i class="ghe-mau trong"></i>
+            Trống
+          </span>
+
+          <span>
+            <i class="ghe-mau dangchon"></i>
+            Đang chọn
+          </span>
+
+          <span>
+            <i class="ghe-mau dadat"></i>
+            Đã đặt
+          </span>
+          <span>
+            <i class="ghethuong"></i>
+            Ghế thường
+          </span>
+          <span>
+            <i class="ghevip"></i>
+            Ghế vip
+          </span>
+          <span>
+            <i class="ghedoi"></i>
+            Ghế đôi
+          </span>
+        </div>
+      </section>
+
+      <section class="box">
+        <h3>5. Chọn dịch vụ</h3>
+        <div id="dichvuContainer"></div>
+
+        <div id="soLuongDichVuBox" class="so-luong-box" style="display: none">
+          <span>Số lượng dịch vụ đang chọn:</span>
+
+          <div class="so-luong-control">
+            <button type="button" id="giamDichVu">−</button>
+            <span id="soLuongDichVu">1</span>
+            <button type="button" id="tangDichVu">+</button>
+          </div>
+        </div>
+
+        <div id="danhSachDichVuDaChon"></div>
+      </section>
+
+      <section class="box" id="nuocBox" style="display: none">
+        <h3>6. Chọn loại nước</h3>
+
+        <div id="nuocContainer"></div>
+
+        <!-- Số lượng nước -->
+        <div id="soLuongNuocBox" class="so-luong-box" style="display: none">
+          <span>Số lượng nước:</span>
+
+          <div class="so-luong-control">
+            <button type="button" id="giamNuoc">−</button>
+            <span id="soLuongNuoc">1</span>
+            <button type="button" id="tangNuoc">+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TỔNG TIỀN -->
+
+      <section class="tong-tien">
+        <span>Tổng tiền:</span>
+
+        <strong id="tongTien"> 0đ </strong>
+      </section>
+
+      <button id="btnTiepTuc" class="btn-tiep-tuc">TIẾP TỤC THANH TOÁN</button>
+    </main>
+
+    <script src="datve.js"></script>
+  </body>
+</html>

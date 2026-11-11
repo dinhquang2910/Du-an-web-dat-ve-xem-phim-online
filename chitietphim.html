@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./phannoidungphim.css" />
+
+    <link rel="icon" href="./photo/avatar.jpg" />
+
+    <title>Chi tiết phim</title>
+  </head>
+
+  <body>
+    <a href="./dangnhapxong.html">
+      <p><u>Trở lại trang chủ</u></p>
+    </a>
+    <h2>Nội dung phim</h2>
+
+    <hr />
+
+    <div class="movie-list" id="movieList"></div>
+
+    <div id="trailerModal" class="trailer-modal">
+      <div class="trailer-box">
+        <button type="button" class="close-trailer" onclick="closeTrailer()">
+          &times;
+        </button>
+
+        <iframe
+          id="trailerVideo"
+          width="100%"
+          height="500"
+          src=""
+          title="Trailer phim"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+    <script src="./chitietphim.js"></script>
+
+    <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

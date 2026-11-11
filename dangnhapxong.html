@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="./photo/avatar.jpg" />
+    <link rel="stylesheet" href="./httrangchu.css" />
+    <title>Đặt vé xem phim</title>
+  </head>
+  <body>
+    <header class="header-user">
+      <div class="menu-trai">
+        <button type="button" onclick="cuonDenPhim('dangChieu')">
+          PHIM ĐANG CHIẾU
+        </button>
+
+        <button type="button" onclick="cuonDenPhim('ngungChieu')">
+          PHIM NGỪNG CHIẾU
+        </button>
+      </div>
+
+      <div class="menu-phai">
+        <button type="button">
+          <a href="./vcuatoi.html">VÉ CỦA TÔI</a>
+        </button>
+
+        <button type="button">
+          <a href="./index.html">ĐĂNG XUẤT</a>
+        </button>
+      </div>
+    </header>
+
+    <h3 class="hoHo">
+      Chào mừng bạn đến với Web đặt vé xem phim <b>QUANG-IT</b>
+    </h3>
+    <div class="bo-loc-phim">
+      <input
+        type="text"
+        id="timKiemTenPhim"
+        placeholder=" Tìm phim theo tên phim..."
+      />
+
+      <select id="chonTheLoai">
+        <option value="">Tất cả thể loại</option>
+      </select>
+    </div>
+
+    <div class="movie-list" id="movieList"></div>
+    <!-- AI ASSISTANT -->
+    <div class="ai-assistant">
+      <!-- Bong bóng lời chào -->
+      <div class="ai-greeting" id="aiGreeting">
+        Xin chào! 👋
+        <br />
+        Mình có thể giúp bạn giải đáp thắc mắc đấy.
+      </div>
+
+      <!-- Robot AI -->
+      <button
+        class="ai-mascot"
+        id="aiMascot"
+        type="button"
+        aria-label="Mở trợ lý AI"
+      >
+        <div class="ai-aura"></div>
+
+        <div class="ai-robot">
+          <div class="ai-antenna">
+            <span></span>
+          </div>
+
+          <div class="ai-head">
+            <div class="ai-ear left"></div>
+            <div class="ai-ear right"></div>
+
+            <div class="ai-eyes">
+              <span class="ai-eye"></span>
+              <span class="ai-eye"></span>
+            </div>
+
+            <div class="ai-mouth"></div>
+
+            <div class="ai-cheek left"></div>
+            <div class="ai-cheek right"></div>
+          </div>
+
+          <div class="ai-body">
+            <div class="ai-chest-light"></div>
+            <div class="ai-arm left"></div>
+            <div class="ai-arm right"></div>
+          </div>
+        </div>
+
+        <span class="ai-status"></span>
+      </button>
+
+      <!-- Khung chat -->
+      <div class="ai-chat-box" id="aiChatBox">
+        <div class="ai-chat-header">
+          <div class="ai-header-info">
+            <div class="ai-avatar">🤖</div>
+            <div>
+              <h4>Quang-AI</h4>
+              <span><i></i> Trợ lý web phim</span>
+            </div>
+          </div>
+
+          <button id="aiClose" type="button">×</button>
+        </div>
+
+        <div class="ai-chat-content" id="aiChatContent">
+          <div class="ai-message">
+            Xin chào! Mình là trợ lý AI của Web đặt vé xem phim.
+            <br />
+            Mình sẽ giúp bạn tìm hiểu về phim, suất chiếu và cách đặt vé hoặc
+            những gì bạn thắc mắc về web nhé .
+          </div>
+        </div>
+
+        <div class="ai-chat-input">
+          <input
+            type="text"
+            id="aiUserInput"
+            placeholder="Nhập câu hỏi của bạn..."
+          />
+          <button id="aiSend" type="button">➤</button>
+        </div>
+      </div>
+    </div>
+    <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./trangchuuser.js"></script>
+    <script src="./ai-assistant.js"></script>
+  </body>
+</html>

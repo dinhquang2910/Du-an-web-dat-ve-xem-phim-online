@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./amindichvu.css" />
+    <link rel="icon" href="../photo/avatar.jpg" />
+    <title>Quản lý dịch vụ</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">ADMIN QUẢN LÝ</div>
+      <nav class="menu">
+        <a href="./amintrangchu.html">Quản lý Phim</a>
+        <a href="./amintheloai.html">Quản lý thể loại</a>
+        <a href="./quanlyphongchieu.html"> Quản lý phòng chiếu </a>
+
+        <a href="./aminuser.html">Quản lý tài khoản</a>
+        <a href="./amindichvu.html" class="active">Quản lý dịch vụ</a>
+        <a href="./amindoanhthu.html">Quản lý doanh thu</a>
+      </nav>
+      <div class="menu logout">
+        <a href="../index.html">Đăng xuất</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Quản lý dịch vụ</h1>
+        <div class="admin-info">👤 <strong>Quản trị viên</strong></div>
+      </div>
+
+      <div class="dichvu-container">
+        <section class="box-them">
+          <h3 id="tieuDeForm">Thêm dịch vụ</h3>
+          <form id="formDichVu" class="form-them">
+            <input
+              type="text"
+              id="tenDichVu"
+              placeholder="Nhập tên dịch vụ..."
+              maxlength="100"
+              required
+            />
+            <input
+              type="number"
+              id="giaDichVu"
+              placeholder="Nhập giá dịch vụ..."
+              min="0"
+              step="1000"
+              required
+            />
+            <button type="submit" class="nut" id="btnLuu">
+              + Thêm dịch vụ
+            </button>
+            <button type="button" class="nut nut-huy" id="btnHuy" hidden>
+              Hủy sửa
+            </button>
+          </form>
+        </section>
+
+        <section class="box-danh-sach">
+          <div class="danh-sach-header">
+            <h3>Danh sách dịch vụ</h3>
+            <span id="soLuongDichVu">0 dịch vụ</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã dịch vụ</th>
+                  <th>Tên dịch vụ</th>
+                  <th>Giá</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="danhSachDichVu">
+                <tr>
+                  <td colspan="5" class="trang-thai">Đang tải danh sách...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="thong-bao" id="thongBao" role="status" aria-live="polite"></div>
+    <script src="./amindichvu.js"></script>
+  </body>
+</html>
